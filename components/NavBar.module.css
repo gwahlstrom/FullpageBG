@@ -1,0 +1,59 @@
+.navContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(106, 106, 107, 0.237);
+  z-index: 1;
+}
+
+.background {
+  filter: blur(4px);
+}
+.foreground {
+  backdrop-filter: blur(10px);
+  width: 100%;
+}
+
+.navText {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  gap: 30px;
+  align-items: center;
+  color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.navText > h3 {
+  letter-spacing: 3px;
+  transition: all 0.2s ease-in-out;
+}
+
+.navText > h3:hover {
+  cursor: pointer;
+  letter-spacing: 5px;
+}
+.ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.ul > li {
+  cursor: pointer;
+  text-decoration: none;
+  list-style: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.ul > li:hover {
+  letter-spacing: 2px;
+}

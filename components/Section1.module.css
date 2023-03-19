@@ -1,0 +1,45 @@
+.main {
+  background-color: rgb(38, 38, 38);
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.mainTexth1 {
+  color: white;
+}
+
+.scrollBtn {
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  padding: 5px 10px 5px 10px;
+  animation: pulsingButton 2s infinite ease-in-out;
+  transition: 0.2s all ease-in-out;
+  z-index: 0;
+}
+
+.scrollBtn:hover {
+  cursor: pointer;
+  background-color: rgb(159, 159, 159);
+}
+
+@keyframes pulsingButton {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
