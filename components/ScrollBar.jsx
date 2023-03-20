@@ -3,38 +3,69 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 
 function ScrollBar() {
-  const [active, setActive] = useState("scrollButton1");
+  const [active, setActive] = useState(1);
 
   const clickHandler = (e) => {
-    if (e === "scrollButton1") {
+    console.log(e);
+    if (e === "1") {
       const nextSection = document.getElementById("sec1");
       nextSection.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
-      setActive(e);
-    } else if (e === "scrollButton2") {
+      setActive(1);
+    } else if (e === "2") {
       const nextSection = document.getElementById("sec2");
       nextSection.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
-      setActive(e);
-    } else if (e === "scrollButton3") {
+      setActive(2);
+    } else if (e === "3") {
       const nextSection = document.getElementById("sec3");
       nextSection.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
-      setActive(e);
-    } else if (e === "scrollButton4") {
+      setActive(3);
+    } else if (e === "4") {
       const nextSection = document.getElementById("sec4");
       nextSection.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
-      setActive(e);
+      setActive(4);
     }
   };
+  const liArr = [1, 2, 3, 4];
 
   useEffect(() => {
-    const thisSection = document.getElementById(active);
-    console.log(thisSection);
-  }, [active]);
+    setActive(1);
+  }, []);
+
+  const myLiMapping = liArr.map((item, index) => {
+    return (
+      <li key={index} onClick={(e) => clickHandler(e.target.id)}>
+        <Image
+          src="/images/circle-fill.svg"
+          height={8}
+          width={8}
+          alt="Scroll icon"
+          id={item}
+          className={active === item ? styles.active : styles.notActive}
+        />
+      </li>
+    );
+  });
 
   return (
     <>
       <div className={styles.container}>
         <ul>
-          <li onClick={(e) => clickHandler(e.target.id)}>
+          {myLiMapping}
+          {/* {liArr.map((item, index) => {
+            return (
+              <li key={index} onClick={(e) => clickHandler(e.target.id)}>
+                <Image
+                  src="/images/circle-fill.svg"
+                  height={8}
+                  width={8}
+                  alt="Scroll icon"
+                  id={item}
+                  className={active === item ? styles.active : styles.notActive}
+                />
+              </li>
+            );
+          })} */}
+          {/* <li onClick={(e) => clickHandler(e.target.id)}>
             <Image
               src="/images/circle-fill.svg"
               height={8}
@@ -69,7 +100,7 @@ function ScrollBar() {
               alt="Scroll icon"
               id="scrollButton4"
             />
-          </li>
+          </li> */}
         </ul>
       </div>
     </>
