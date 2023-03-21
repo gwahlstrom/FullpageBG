@@ -6,7 +6,6 @@ function ScrollBar() {
   const [active, setActive] = useState(1);
 
   const clickHandler = (e) => {
-    console.log(e);
     if (e === "1") {
       const nextSection = document.getElementById("sec1");
       nextSection.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });

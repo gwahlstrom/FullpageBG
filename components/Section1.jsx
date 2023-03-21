@@ -6,7 +6,7 @@ function Section1(props) {
       <main className={styles.main} id="sec1">
         <div className={styles.container}>
           <div className={styles.mainText}>
-            <h1 className={styles.mainTexth1}>Welcome</h1>
+            <h1 className={styles.mainTexth1}>WELCOME</h1>
           </div>
         </div>
       </main>

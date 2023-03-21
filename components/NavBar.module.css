@@ -5,7 +5,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(106, 106, 107, 0.237);
+  background-color: rgba(0, 0, 0, 0.171);
   z-index: 1;
 }
 
@@ -30,12 +30,9 @@
 .navText > h3 {
   letter-spacing: 3px;
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
 
-.navText > h3:hover {
-  cursor: pointer;
-  letter-spacing: 5px;
-}
 .ul {
   display: flex;
   flex-direction: row;
@@ -54,6 +51,11 @@
   transition: all 0.2s ease-in-out;
 }
 
-.ul > li:hover {
+/* .ul > li:hover {
   letter-spacing: 2px;
 }
+
+.navText > h3:hover {
+  cursor: pointer;
+  letter-spacing: 5px;
+} */

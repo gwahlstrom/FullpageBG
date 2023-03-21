@@ -1,5 +1,5 @@
 .main {
-  background-color: rgb(38, 38, 38);
+  background: linear-gradient(0deg, #39518a 0%, #0c1c3d 100%);
   height: 100vh;
 }
 
@@ -8,12 +8,29 @@
   flex-direction: center;
   justify-content: center;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   height: 100vh;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.mainText {
+  width: 400px;
 }
 
 .mainTexth1 {
   color: white;
+  font-size: 40px;
+  letter-spacing: 10px;
+  text-align: left;
+  animation: h3intro 2s ease-in-out 0s 1;
+  transition: all 0.8s ease-in-out;
+}
+
+.mainTexth1:hover {
+  scale: 1.2;
+  transform: translateX(40px);
+  letter-spacing: 15px;
 }
 
 .scrollBtn {
@@ -32,7 +49,7 @@
   background-color: rgb(159, 159, 159);
 }
 
-@keyframes pulsingButton {
+/* @keyframes pulsingButton {
   0% {
     transform: scale(1);
   }
@@ -41,5 +58,14 @@
   }
   100% {
     transform: scale(1);
+  }
+} */
+
+@keyframes h3intro {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
